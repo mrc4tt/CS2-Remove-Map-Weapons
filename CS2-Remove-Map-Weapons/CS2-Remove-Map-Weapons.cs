@@ -16,6 +16,26 @@ namespace CS2_Remove_Map_Weapons
 			Log(PluginInfo());
 			Log(ModuleDescription);
 			RegisterEventHandlers();
+
+			// Loaded with css_plugins load while a map is already running (fshost's CustomCommands
+			// does this for retakes): clear the current map's weapons now instead of next round.
+			if (!hotReload && IsMapRunning())
+			{
+				Server.NextFrame(RemoveMapWeapons);
+			}
+		}
+
+		private static bool IsMapRunning()
+		{
+			try
+			{
+				return !string.IsNullOrEmpty(Server.MapName);
+			}
+			catch
+			{
+				// Globals are not available before the first map has started.
+				return false;
+			}
 		}
 
 		void RemoveMapWeapons()

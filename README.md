@@ -1,4 +1,13 @@
-# CS2 Remove Map Weapons
+# CS2 Remove Map Weapons (fshost build)
+
+> This is fshost's maintained copy of **[kus/CS2-Remove-Map-Weapons](https://github.com/kus/CS2-Remove-Map-Weapons)**
+> by **Kus**. All credit for the plugin goes to the original author. It is distributed under the original
+> GPL-3.0 license (see [LICENSE](LICENSE)).
+>
+> Differences from upstream: built against the CounterStrikeSharp API fshost runs (mrc4tt/CounterStrikeSharp)
+> on .NET 10, and clears the map's weapons right away when loaded mid-map. Download
+> **CS2-Remove-Map-Weapons.zip** from the [releases](https://github.com/mrc4tt/CS2-Remove-Map-Weapons/releases/latest).
+> See [CHANGELOG.md](CHANGELOG.md).
   
 A plugin for CS2 built on [CounterStrikeSharp](https://docs.cssharp.dev/) that removes the weapons from the map as `mp_weapons_allow_map_placed 0` does not work.
 
@@ -14,7 +23,7 @@ I run an [open source modded multi-mod dedicated CS2 server](https://github.com/
 
 ## Installation
 
-1) [Download](https://github.com/kus/CS2-Remove-Map-Weapons/releases/) and open the zip file.
+1) [Download](https://github.com/mrc4tt/CS2-Remove-Map-Weapons/releases/latest) `CS2-Remove-Map-Weapons.zip` and open it.
 2) Extract the `addons` folder into your server's `game/csgo/` directory (this file should now exist `game/csgo/addons/counterstrikesharp/plugins/CS2-Remove-Map-Weapons/CS2-Remove-Map-Weapons.dll`)
 3) Restart your server or from the server console run `css_plugins load "plugins/CS2-Remove-Map-Weapons/CS2-Remove-Map-Weapons.dll"`
 
