@@ -4,7 +4,6 @@ using CounterStrikeSharp.API.Core.Attributes;
 
 namespace CS2_Remove_Map_Weapons
 {
-	[MinimumApiVersion(167)]
 	public partial class CS2_Remove_Map_Weapons : BasePlugin
 	{
 		public override string ModuleName => "Remove Map Weapons";
